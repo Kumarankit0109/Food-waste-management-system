@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="css/login.css">
+
+<style>
+
+/* Top tabs inside box */
+.tabs{
+display:flex;
+margin-bottom:15px;
+}
+
+.tab{
+flex:1;
+text-align:center;
+padding:10px;
+cursor:pointer;
+background:#ccc;
+font-weight:bold;
+}
+
+.tab.active{
+background:#2e7d32;
+color:white;
+}
+
+/* Hide forms */
+.form-section{
+display:none;
+}
+
+.form-section.active{
+display:block;
+}
+
+</style>
+
+<script>
+function switchTab(type){
+
+document.getElementById("userSection").classList.remove("active");
+document.getElementById("adminSection").classList.remove("active");
+
+document.getElementById("userTab").classList.remove("active");
+document.getElementById("adminTab").classList.remove("active");
+
+if(type === "user"){
+document.getElementById("userSection").classList.add("active");
+document.getElementById("userTab").classList.add("active");
+}else{
+document.getElementById("adminSection").classList.add("active");
+document.getElementById("adminTab").classList.add("active");
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<!-- Tabs -->
+<div class="tabs">
+<div id="userTab" class="tab active" onclick="switchTab('user')">User</div>
+<div id="adminTab" class="tab" onclick="switchTab('admin')">Admin</div>
+</div>
+
+<!-- USER LOGIN -->
+<div id="userSection" class="form-section active">
+
+<h2>User Login</h2>
+
+<form action="php/login.php" method="post">
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Login</button>
+</form>
+
+<p class="register-link">
+New User? <a href="register.html">Register Here</a>
+</p>
+
+</div>
+
+<!-- ADMIN LOGIN -->
+<!-- ADMIN LOGIN -->
+<div id="adminSection" class="form-section">
+
+<h2>Admin Login</h2>
+
+<form action="php/admin_login.php" method="post">
+<input type="text" name="username" placeholder="Admin Username" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Login</button>
+</form>
+
+<p class="register-link">
+New Admin? <a href="admin_registration.html">Register Here</a>
+</p>
+
+</div>
+
+<p class="back-link">
+<a href="index.html">Back to Home</a>
+</p>
+
+</div>
+
+</body>
+</html>

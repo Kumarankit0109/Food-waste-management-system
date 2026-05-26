@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background-image:url("https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+height:100vh;
+color:white;
+}
+
+/* Navbar */
+
+.navbar{
+background:rgba(46,125,50,0.9);
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+margin-right:25px;
+font-size:18px;
+font-weight:bold;
+}
+
+.nav-links a:hover{
+text-decoration:underline;
+}
+
+.logout-btn{
+background:#d32f2f;
+color:white;
+padding:8px 15px;
+border:none;
+border-radius:5px;
+font-size:15px;
+cursor:pointer;
+}
+
+.logout-btn:hover{
+background:#b71c1c;
+}
+
+/* Transparent Hero Box */
+
+.hero-box{
+background:rgba(0,0,0,0.45);
+padding:50px;
+border-radius:12px;
+width:60%;
+margin:auto;
+margin-top:180px;
+text-align:center;
+backdrop-filter:blur(6px);
+}
+
+/* Text styling */
+
+.hero-box h1{
+font-size:42px;
+margin-bottom:25px;
+}
+
+.hero-box p{
+font-size:18px;
+line-height:1.6;
+margin-bottom:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="nav-links">
+<a href="home.html">Home</a>
+<a href="profile.php">Profile</a>
+<a href="about.html">About Us</a>
+<a href="donate.html">Donate</a>
+</div>
+
+<button class="logout-btn" onclick="window.location.href='index.html'">
+Logout
+</button>
+
+</div>
+
+
+<div class="hero-box">
+
+<h1>Welcome to Food Wastage Reduction System</h1>
+
+<p>
+This platform helps donors share surplus food with NGOs and volunteers.
+Our goal is to ensure that excess food reaches people in need instead of being wasted.
+</p>
+
+<p>
+Use the navigation menu above to manage your profile, learn about the project,
+or donate surplus food to help communities.
+</p>
+
+</div>
+
+</body>
+</html>
